@@ -42,14 +42,14 @@ const TodoList: React.FC = () => {
   };
 
   return (
-    <div className="flex flex-col items-center justify-center">
-      <h2 className="text-center text-white mb-4 text-lg md:mt-8 underline">
+    <div className="flex flex-col items-center justify-center ">
+      <h2 className="text-center text-white mb-4 text-lg md:mt-8 underline ">
         Add a todo here:
       </h2>
       <div className="flex">
         <input
           type="text"
-          className="border-gray-400 p-2 rounded"
+          className="border-gray-400 p-2 rounded ml-6 w-70"
           value={inputText}
           onChange={(e) => setInputText(e.target.value)}
         />
@@ -81,7 +81,7 @@ const TodoList: React.FC = () => {
               </span>
             </div>
             <button
-              className="ml-3 px-4 py-2 rounded text-white bg-red-800"
+              className="ml-3 px-4 py-2 rounded text-white bg-red-800 hover:bg-red-950"
               onClick={() => deleteTask(task.id)}
             >
               Delete
