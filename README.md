@@ -1,4 +1,4 @@
-# Miniprojekt - A Todo List
+# Mini Project - A Todo List
 
 ### Description
 
@@ -12,6 +12,6 @@
 
 ### How to run my project:
 
-1. Use the command npm install in the terminal to install all necessary packages and dependencies for the project.
+1. Use the command `npm install` in the terminal to install all necessary packages and dependencies for the project.
 
-2. Use the command npm run dev in the terminal to start the development server. This will compile and start your application, enabling hot reloading for easier development.
+2. Use the command `npm run dev` in the terminal to start the development server. This will compile and start your application, enabling hot reloading for easier development.
