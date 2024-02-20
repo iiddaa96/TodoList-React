@@ -1,11 +1,10 @@
-import TodoList from "./TodoList";
+import Header from "./components/Header";
+import TodoList from "./components/TodoList";
 
 function App() {
   return (
     <>
-      <header className="mb-4 text-4xl text-center md:text-6xl bg-slate-400 text-slate-50">
-        <h1>Todo List</h1>
-      </header>
+      <Header />
       <main className="bg-slate-400">
         <TodoList />
       </main>
