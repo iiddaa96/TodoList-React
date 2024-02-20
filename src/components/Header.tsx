@@ -1,7 +1,7 @@
 function Header() {
   return (
-    <header className="mb-4 text-4xl text-center md:text-6xl bg-slate-400 text-slate-50">
-      <h1>Todo List</h1>
+    <header className=" bg-gray-300  my-16 text-4xl text-center md:text-6xl font-semibold text-black ">
+      <h1>My Todo List</h1>
     </header>
   );
 }

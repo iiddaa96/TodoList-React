@@ -5,11 +5,13 @@ import TodoList from "./components/TodoList";
 function App() {
   return (
     <>
-      <Header />
-      <main className="bg-slate-400">
-        <TodoList />
-      </main>
-      <Footer />
+      <div className="bg-gray-300 rounded-lg p-10 mt-20 mx-auto max-w-2xl">
+        <Header />
+        <main>
+          <TodoList />
+        </main>
+        <Footer />
+      </div>
     </>
   );
 }
