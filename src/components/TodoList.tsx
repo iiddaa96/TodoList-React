@@ -42,7 +42,7 @@ const TodoList: React.FC = () => {
   };
 
   return (
-    <div className="flex flex-col items-center justify-center ">
+    <div className="flex flex-col items-center justify-center">
       <h2 className="text-center text-black text-xl font-semibold mb-4 underline">
         Add a todo here:
       </h2>
@@ -61,7 +61,7 @@ const TodoList: React.FC = () => {
         </button>
       </div>
 
-      <div className="w-full max-w-md mt-4">
+      <div className="w-full max-w-md mt-4 overflow-y-auto">
         {tasks.map((task) => (
           <TodoItem
             key={task.id}

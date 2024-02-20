@@ -5,9 +5,9 @@ import TodoList from "./components/TodoList";
 function App() {
   return (
     <>
-      <div className="bg-gray-300 rounded-lg p-10 mt-20 mx-auto max-w-2xl">
+      <div className="bg-gray-300 rounded-lg p-10 mt-14 mx-auto max-w-2xl">
         <Header />
-        <main>
+        <main className="h-[300px] overflow-y-auto">
           <TodoList />
         </main>
         <Footer />
