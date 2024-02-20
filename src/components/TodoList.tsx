@@ -44,7 +44,7 @@ const TodoList: React.FC = () => {
   return (
     <div className="flex flex-col items-center justify-center">
       <h2 className="text-center text-white mb-4 text-lg md:mt-8 underline">
-        Add a todo here:
+        Add a todo:
       </h2>
       <div className="flex">
         <input

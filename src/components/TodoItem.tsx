@@ -59,7 +59,7 @@ const TodoItem: React.FC<TodoItemProps> = ({
       <div>
         {editing ? (
           <button
-            className="ml-3 px-4 py-2 rounded text-white bg-blue-800 hover:bg-blue-900"
+            className="ml-3 px-4 py-2 rounded text-white bg-lime-700 hover:bg-green-900"
             onClick={handleSave}
           >
             Save
@@ -67,7 +67,7 @@ const TodoItem: React.FC<TodoItemProps> = ({
         ) : (
           <>
             <button
-              className="ml-3 px-4 py-2 rounded text-white bg-blue-800 hover:bg-blue-900"
+              className="ml-3 px-4 py-2 rounded text-white bg-gray-700 hover:bg-gray-800"
               onClick={handleEdit}
             >
               Edit
