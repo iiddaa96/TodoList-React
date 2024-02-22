@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 
-// Definiera typen för en uppgift
-interface Task {
+//Beskriver strukturen för objekten i tasks-arrayen
+export interface Task {
   id: number;
   text: string;
   completed: boolean;
@@ -48,7 +48,7 @@ const TodoItem: React.FC<TodoItemProps> = ({
             type="text"
             value={inputText}
             onChange={(e) => setInputText(e.target.value)}
-            className="border-gray-400 p-2 rounded ml-6 w-70"
+            className=" p-2 rounded ml-6 w-70"
           />
         ) : (
           <span className={`text-lg ${task.completed ? "line-through" : ""}`}>

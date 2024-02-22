@@ -1,8 +1,8 @@
 import React, { useState } from "react";
 import TodoItem from "./TodoItem";
 
-// Definiera typen för en uppgift
-interface Task {
+// Beskriver strukturen för objekten i tasks-arrayen
+export interface Task {
   id: number;
   text: string;
   completed: boolean;
@@ -43,7 +43,10 @@ const TodoList: React.FC = () => {
 
   return (
     <div className="flex flex-col items-center justify-center">
-      <h2 className="text-center text-black text-xl font-semibold mb-4 underline">
+      <h2
+        style={{ fontFamily: "Lobster, cursive", fontSize: 25 }}
+        className="text-center text-black font-semibold mb-4 underline"
+      >
         Add a todo here:
       </h2>
       <div className="flex">
