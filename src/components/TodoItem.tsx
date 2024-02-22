@@ -58,6 +58,7 @@ const TodoItem: React.FC<TodoItemProps> = ({
           </span>
         )}
       </div>
+      {/* ----------Ärver knapp från ButtonHandler men lägger till CSS -------------*/}
       <div>
         {editing ? (
           <ButtonHandler
