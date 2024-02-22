@@ -1,6 +1,6 @@
 import React from "react";
 
-// Typedefinition för DeleteHandler som inte tar några argument och inte returnerar något värde.
+// Type definition för DeleteHandler som inte tar några argument och inte returnerar något värde.
 export type DeleteHandler = () => void;
 
 interface ButtonProps {

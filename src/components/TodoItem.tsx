@@ -1,7 +1,6 @@
 import React, { useState } from "react";
 import ButtonHandler, { DeleteHandler } from "./ButtonHandler";
 
-// Beskriver strukturen för objekten i tasks-arrayen
 export interface Task {
   id: number;
   text: string;
