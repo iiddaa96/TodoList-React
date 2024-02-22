@@ -1,31 +1,38 @@
 import React, { useState } from "react";
 import ButtonHandler, { DeleteHandler } from "./ButtonHandler";
 
+// Beskriver strukturen för objekten i tasks-arrayen
 export interface Task {
   id: number;
   text: string;
   completed: boolean;
 }
 
+// Ett interface för funktion att ta bort en uppgift, har hand om en enskild uppgift och funktion för att markera uppgiften som klar
 interface TodoItemProps {
   task: Task;
   onDelete: DeleteHandler;
   onToggleCompletion: () => void;
 }
 
+// Enskild uppgift i listan
+// FC - Funktion komponent, en funktionell komponent i React som  emot props och returnerar JSX
 const TodoItem: React.FC<TodoItemProps> = ({
   task,
   onDelete,
   onToggleCompletion,
 }) => {
+  // Lokalt tillstånd för redigeringsläge och textinput
   const [editing, setEditing] = useState(false);
   const [inputText, setInputText] = useState(task.text);
 
+  // Hanterar redigeringsläget
   const handleEdit = () => {
     setEditing(true);
     setInputText(task.text);
   };
 
+  // Sparar ändringar efter redigering
   const handleSave = () => {
     setEditing(false);
   };

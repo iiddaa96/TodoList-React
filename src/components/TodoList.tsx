@@ -2,10 +2,12 @@ import React, { useState } from "react";
 import ButtonHandler from "./ButtonHandler";
 import TodoItem, { Task } from "./TodoItem";
 
+// Renderar listan med uppgifter
 const TodoList: React.FC = () => {
   const [tasks, setTasks] = useState<Task[]>([]);
   const [inputText, setInputText] = useState<string>("");
 
+  // Lägger till en ny uppgift
   const addTask = () => {
     if (inputText.trim() !== "") {
       const newTask: Task = {
@@ -18,6 +20,7 @@ const TodoList: React.FC = () => {
     }
   };
 
+  // Markerar en uppgift som slutförd
   const toggleTaskCompletion = (taskId: number) => {
     const updatedTasks = tasks.map((task) =>
       task.id === taskId ? { ...task, completed: !task.completed } : task
@@ -25,6 +28,7 @@ const TodoList: React.FC = () => {
     setTasks(updatedTasks);
   };
 
+  // Tar bort en uppgift
   const deleteTask = (taskId: number) => {
     const updatedTasks = tasks.filter((task) => task.id !== taskId);
     setTasks(updatedTasks);
