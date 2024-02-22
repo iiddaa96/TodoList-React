@@ -1,12 +1,5 @@
 import React, { useState } from "react";
-import TodoItem from "./TodoItem";
-
-// Beskriver strukturen för objekten i tasks-arrayen
-export interface Task {
-  id: number;
-  text: string;
-  completed: boolean;
-}
+import TodoItem, { Task } from "./TodoItem";
 
 const TodoList: React.FC = () => {
   // State för att hålla listan med uppgifter
