@@ -1,13 +1,11 @@
 import React, { useState } from "react";
+import ButtonHandler from "./ButtonHandler";
 import TodoItem, { Task } from "./TodoItem";
 
 const TodoList: React.FC = () => {
-  // State för att hålla listan med uppgifter
   const [tasks, setTasks] = useState<Task[]>([]);
-  // State för att hålla texten i input fältet
   const [inputText, setInputText] = useState<string>("");
 
-  // Funktion för att lägga till en ny uppgift
   const addTask = () => {
     if (inputText.trim() !== "") {
       const newTask: Task = {
@@ -20,7 +18,6 @@ const TodoList: React.FC = () => {
     }
   };
 
-  // Funktion för att markera en uppgift som slutförd
   const toggleTaskCompletion = (taskId: number) => {
     const updatedTasks = tasks.map((task) =>
       task.id === taskId ? { ...task, completed: !task.completed } : task
@@ -28,7 +25,6 @@ const TodoList: React.FC = () => {
     setTasks(updatedTasks);
   };
 
-  // Funktion för att ta bort en uppgift
   const deleteTask = (taskId: number) => {
     const updatedTasks = tasks.filter((task) => task.id !== taskId);
     setTasks(updatedTasks);
@@ -49,12 +45,12 @@ const TodoList: React.FC = () => {
           value={inputText}
           onChange={(e) => setInputText(e.target.value)}
         />
-        <button
+        <ButtonHandler
           onClick={addTask}
-          className="bg-gray-700 text-white px-4 py-2 rounded hover:bg-gray-800 ml-3"
+          className="text-white bg-gray-700 hover:bg-gray-800 px-4 py-2 ml-3"
         >
           Add
-        </button>
+        </ButtonHandler>
       </div>
 
       <div className="w-full max-w-md mt-4 overflow-y-auto">
