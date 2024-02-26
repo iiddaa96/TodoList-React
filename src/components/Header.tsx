@@ -7,7 +7,7 @@ function Header() {
         My Todo List
       </h1>
       <button className="border-2 border-black">
-        <Link to="/doneTodos" className="button">
+        <Link to="/done-todos" className="button">
           Done todos
         </Link>
       </button>

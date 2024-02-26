@@ -14,7 +14,7 @@ const router = createBrowserRouter(
   createRoutesFromElements(
     <Route path="/" Component={App}>
       <Route index Component={TodoList} />
-      <Route path="avklarade" element={<DoneTodos />} />
+      <Route path="done-todos" element={<DoneTodos />} />
     </Route>
   )
 );
