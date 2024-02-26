@@ -10,7 +10,7 @@ function Header() {
       {/* Knapp till DoneTodos */}
       <Link
         to="/done-todos"
-        className="button bg-black hover:bg-white text-white hover:text-black font-semibold py-2 px-4 rounded inline-block mt-4"
+        className="button bg-green-900 hover:bg-gray-800 hover:text-white text-white font-semibold py-2 px-4 rounded inline-block mt-4 "
       >
         Done todos
       </Link>

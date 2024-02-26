@@ -6,7 +6,7 @@ import greenBackground from "./img/grön.jpg";
 function App() {
   return (
     <div
-      className="bg-gray-300 rounded-lg p-10 mt-14 mx-auto max-w-2xl"
+      className="bg-gray-300 rounded-lg p-10 mt-5 mx-auto max-w-2xl"
       style={{ backgroundImage: `url(${greenBackground})` }}
     >
       <Header />
