@@ -9,6 +9,7 @@
 - Vite
 - React
 - TypeScript
+- React Router
 
 ### How to run my project:
 
