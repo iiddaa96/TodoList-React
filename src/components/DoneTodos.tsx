@@ -2,7 +2,7 @@ import { Link } from "react-router-dom";
 
 function DoneTodos() {
   return (
-    <div>
+    <>
       {/* Tillfälliga Done todo sida */}
       <h2
         className="my-2 text-black underline"
@@ -16,14 +16,16 @@ function DoneTodos() {
         <li className="ml-6 w-70">Diska</li>
       </ul>
 
-      {/* Tillbaka knapp till AppLayout */}
-      <Link
-        to="/"
-        className=" inline-block button bg-black hover:bg-green-800 text-white font-semibold py-2 px-4 rounded "
-      >
-        Back
-      </Link>
-    </div>
+      <div className="flex justify-end">
+        {/* Tillbaka knapp till AppLayout */}
+        <Link
+          to="/"
+          className=" button bg-black hover:bg-green-800 text-white font-semibold py-2 px-4 rounded "
+        >
+          Back
+        </Link>
+      </div>
+    </>
   );
 }
 
