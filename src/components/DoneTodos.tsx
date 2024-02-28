@@ -11,9 +11,9 @@ function DoneTodos() {
         Done todos:
       </h2>
       <ul>
-        <li className="ml-6 w-70">Städat</li>
-        <li className="ml-6 w-70">Handla</li>
-        <li className="ml-6 w-70">Diska</li>
+        <li className="ml-6 w-70 list-disc">Städat</li>
+        <li className="ml-6 w-70 list-disc">Handla</li>
+        <li className="ml-6 w-70 list-disc">Diska</li>
       </ul>
 
       <div className="flex justify-end">
