@@ -3,6 +3,7 @@
 ### Description
 
 - The ToDo App is a very simple web application that allows users to create a list of tasks to do. Users can add todo tasks, mark them as completed, and remove them from the list. It's also possible to edit a todo if needed.
+- For now the list of completed todos is not yet complete, so I have temporarily created three completed todos.
 
 ### Tools Used:
 

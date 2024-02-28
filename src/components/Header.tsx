@@ -7,7 +7,7 @@ function Header() {
         My Todo List
       </h1>
 
-      {/* Knapp till DoneTodos */}
+      {/* Knapp link till DoneTodos */}
       <Link
         to="/done-todos"
         className="button bg-green-900 hover:bg-gray-800 text-white py-1 px-2 rounded inline-block mt-2 "
