@@ -7,7 +7,7 @@ export interface Task {
   completed: boolean;
 }
 
-// interface för funktion att ta bort en uppgift, har hand om en enskild uppgift och funktion för att markera uppgiften som klar
+// interface för att ta bort en uppgift, har hand om en enskild uppgift och funktion för att markera uppgiften som klar
 interface TodoItemProps {
   task: Task;
   onDelete: DeleteHandler;

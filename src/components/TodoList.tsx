@@ -7,7 +7,7 @@ const TodoList: React.FC = () => {
   const [tasks, setTasks] = useState<Task[]>([]); // Tillstånd för att lagra uppgifter
   const [inputText, setInputText] = useState<string>(""); // Tillstånd för att lagra texten från input-fältet
 
-  // Lägger till en ny uppgift
+  // Lägger till en ny uppgift/todo
   const addTask = () => {
     if (inputText.trim() !== "") {
       const newTask: Task = {
@@ -15,7 +15,7 @@ const TodoList: React.FC = () => {
         text: inputText,
         completed: false,
       };
-      setTasks([...tasks, newTask]); // Lägger till den nya uppgiften i tasks-arrayen
+      setTasks([...tasks, newTask]); // Lägger till den nya uppgiften/todo i tasks-arrayen
       setInputText("");
     }
   };
@@ -66,6 +66,7 @@ const TodoList: React.FC = () => {
       </div>
 
       <div className="w-full max-w-md mt-4 overflow-y-auto">
+        {/* Renderar varje uppgift/ todo med TodoItem-komponenten */}
         {tasks.map((task) => (
           <TodoItem
             key={task.id}
