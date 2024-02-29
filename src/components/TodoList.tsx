@@ -4,8 +4,8 @@ import TodoItem, { Task } from "./TodoItem";
 
 // Renderar listan med uppgifter
 const TodoList: React.FC = () => {
-  const [tasks, setTasks] = useState<Task[]>([]);
-  const [inputText, setInputText] = useState<string>("");
+  const [tasks, setTasks] = useState<Task[]>([]); // Tillstånd för att lagra uppgifter
+  const [inputText, setInputText] = useState<string>(""); // Tillstånd för att lagra texten från input-fältet
 
   // Lägger till en ny uppgift
   const addTask = () => {
@@ -15,7 +15,7 @@ const TodoList: React.FC = () => {
         text: inputText,
         completed: false,
       };
-      setTasks([...tasks, newTask]);
+      setTasks([...tasks, newTask]); // Lägger till den nya uppgiften i tasks-arrayen
       setInputText("");
     }
   };
@@ -25,12 +25,20 @@ const TodoList: React.FC = () => {
     const updatedTasks = tasks.map((task) =>
       task.id === taskId ? { ...task, completed: !task.completed } : task
     );
-    setTasks(updatedTasks);
+    setTasks(updatedTasks); // Uppdaterar tasks-arrayen med den uppdaterade todosen
   };
 
   // Tar bort en uppgift
   const deleteTask = (taskId: number) => {
-    const updatedTasks = tasks.filter((task) => task.id !== taskId);
+    const updatedTasks = tasks.filter((task) => task.id !== taskId); // Skapar en ny array med uppgifter som inte matchar taskId
+    setTasks(updatedTasks); // Uppdaterar tasks-arrayen med den nya arrayen utan den borttagna uppgiften/todo
+  };
+
+  // Uppdaterar texten för en uppgift
+  const updateTaskText = (taskId: number, newText: string) => {
+    const updatedTasks = tasks.map((task) =>
+      task.id === taskId ? { ...task, text: newText } : task
+    );
     setTasks(updatedTasks);
   };
 
@@ -64,6 +72,7 @@ const TodoList: React.FC = () => {
             task={task}
             onDelete={() => deleteTask(task.id)}
             onToggleCompletion={() => toggleTaskCompletion(task.id)}
+            onUpdateText={(newText: string) => updateTaskText(task.id, newText)}
           />
         ))}
       </div>

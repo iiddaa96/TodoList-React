@@ -7,19 +7,21 @@ export interface Task {
   completed: boolean;
 }
 
-// Ett interface för funktion att ta bort en uppgift, har hand om en enskild uppgift och funktion för att markera uppgiften som klar
+// interface för funktion att ta bort en uppgift, har hand om en enskild uppgift och funktion för att markera uppgiften som klar
 interface TodoItemProps {
   task: Task;
   onDelete: DeleteHandler;
   onToggleCompletion: () => void;
+  onUpdateText: (newText: string) => void;
 }
 
 // Enskild uppgift i listan
-// FC - Funktion komponent, en funktionell komponent i React som  emot props och returnerar JSX
+// FC - Funktion komponent, en funktionell komponent i React som tar emot props och returnerar JSX
 const TodoItem: React.FC<TodoItemProps> = ({
   task,
   onDelete,
   onToggleCompletion,
+  onUpdateText,
 }) => {
   // Lokalt tillstånd för redigeringsläge och textinput
   const [editing, setEditing] = useState(false);
@@ -34,6 +36,9 @@ const TodoItem: React.FC<TodoItemProps> = ({
   // Sparar ändringar efter redigering
   const handleSave = () => {
     setEditing(false);
+    if (inputText.trim() !== "") {
+      onUpdateText(inputText); // Anropa onUpdateText med den nya texten
+    }
   };
 
   return (
